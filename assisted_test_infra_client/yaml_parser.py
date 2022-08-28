@@ -18,9 +18,11 @@ def read_yaml(file):
     with open(file) as file:
         try:
             data = yaml.safe_load(file)
-            for key, value in data.items():
-                print(key, ":", value)
+            # for key, value in data.items():
+                # print(key, ":", value)
         except yaml.YAMLError as exception:
             print(exception)
-    print(data)
+    print(data['tests'][10])
+    # for i in data['tests']:
+    #     print(i['as'])
     return data
